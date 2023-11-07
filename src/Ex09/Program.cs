@@ -15,8 +15,17 @@
                 //{
                 //    2 => "Monday",
                 //   3 => "Tuesday",
-                   
+
                 //}
+                var day = num switch { 
+                    2 => "Monday", 
+                    3=> "Tuesday" ,
+                    4 => "Wednesday",
+                    5 => "Thurday",
+                    6 => "Friday",
+                    7 => "Saturday",
+                    8 => "Monday"
+                };
 
 
 
