@@ -27,6 +27,8 @@
                     8 => "Monday"
                 };
 
+                Console.WriteLine(day);
+
 
 
             }
