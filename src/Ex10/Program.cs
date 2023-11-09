@@ -2,24 +2,32 @@
 {
     internal class Program
     {
+        // Viết chương trình nhập vào 1 số, tính tổng các số liên tiếp từ 0
         static void Main(string[] args)
         {
-            int num;
-            bool isNum;
+            var number = GetNumber();
             var sum = 0;
-            do
+            var text = "";
+
+            for (int i = 1; i <= number; i++)
             {
-                Console.Write("Input Your Number: ");
-                isNum = int.TryParse(Console.ReadLine(), out num);
+                sum += i;
+                text += i < number ? $"{i} + " : $"{i}";
+            }
 
-                for (int i = num - 4; i < num + 1; i++)
+            Console.WriteLine($"{text} = {sum}");
+        }
+
+        static int GetNumber()
+        {
+            while (true)
+            {
+                Console.Write("Enter a number: ");
+                if (int.TryParse(Console.ReadLine(), out var num))
                 {
-                    sum += i;
+                    return num;
                 }
-                Console.WriteLine(sum);
-
-            } 
-            while (isNum == false);
+            }
         }
     }
 }

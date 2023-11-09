@@ -2,25 +2,28 @@
 {
     internal class Program
     {
+        // write a program to sum 2 numbers from user input
         static void Main(string[] args)
         {
-            int num1;
-            int num2;
-            bool isNum;
-            Console.WriteLine("Input first number: ");
-            var n1 = Console.ReadLine();
-            Console.WriteLine("Input second number: ");
-            var n2 = Console.ReadLine();
-            isNum = int.TryParse(n1, out num1);
-            isNum = int.TryParse(n2, out num2);
-            Console.WriteLine($"Sum of number 1 and number 2: {Sum(num1, num2)}");
+            var firstNumber = GetNumber("Enter first number: ");
+            var secondNumber = GetNumber("Enter second number: ");
+            var sum = firstNumber + secondNumber;
 
-            int Sum(int a, int b)
-            {
-                return a + b;
-            }
+            Console.WriteLine($"{firstNumber} + {secondNumber} = {sum}");
         }
 
+        // extract a method to avoid duplicate code
+        static int GetNumber(string message)
+        {
+            var valid = false;
+            int num = 0;
+            while (!valid)
+            {
+                Console.Write(message);
+                valid = int.TryParse(Console.ReadLine(), out num);
+            }
 
+            return num;
+        }
     }
 }

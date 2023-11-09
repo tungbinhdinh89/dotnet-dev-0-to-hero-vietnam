@@ -4,37 +4,34 @@
     {
         static void Main(string[] args)
         {
-            int num;
-            bool isNum;
-            do
+            var day = GetWeekDay();
+            var text = day switch
             {
-                Console.Write("Input Your Number: ");
-                isNum = int.TryParse(Console.ReadLine(), out num);
+                2 => "Monday",
+                3 => "Tuesday",
+                4 => "Wednesday",
+                5 => "Thursday",
+                6 => "Friday",
+                7 => "Saturday",
+                _ => "Sunday"
+            };
 
-                //var day = switch num;
-                //{
-                //    2 => "Monday",
-                //   3 => "Tuesday",
+            Console.WriteLine(text);
+        }
 
-                //}
-                var day = num switch { 
-                    2 => "Monday", 
-                    3=> "Tuesday" ,
-                    4 => "Wednesday",
-                    5 => "Thurday",
-                    6 => "Friday",
-                    7 => "Saturday",
-                    8 => "Monday"
-                };
-
-                Console.WriteLine(day);
-
-
-
+        static int GetWeekDay()
+        {
+            while (true)
+            {
+                Console.Write("Enter a number (2->8): ");
+                if (int.TryParse(Console.ReadLine(), out var num))
+                {
+                    if (2 <= num && num <= 8)
+                    {
+                        return num;
+                    }
+                }
             }
-            while (num < 2 || num > 8);
-
-                
-            }
+        }
     }
 }

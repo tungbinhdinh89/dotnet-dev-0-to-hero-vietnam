@@ -2,22 +2,19 @@
 {
     internal class Program
     {
+        // Viết chương trình nhập vào 1 ký tự bất kỳ, in ra "Bạn đã nhập số" nếu ký tự đó là số, "Bạn đã nhập chuỗi" nếu ký tự không phải là số
         static void Main(string[] args)
         {
-            int num;
-            bool isNum;
-            Console.WriteLine("Input your character: ");
-            var userInput = Console.ReadLine();
-            isNum = int.TryParse(userInput, out num);
-            if (isNum == false)
+            Console.Write("Enter a character: ");
+            var isNumber = int.TryParse(Console.ReadLine(), out var _); // discard output as we don't need it
+            if (isNumber)
             {
-                Console.WriteLine("Your input is string");
+                Console.WriteLine("This is a number");
             }
             else
             {
-                Console.WriteLine("Your input is number");
-            }    
-            
+                Console.WriteLine("This is not a number");
+            }
         }
     }
 }
