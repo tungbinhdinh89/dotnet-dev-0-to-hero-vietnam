@@ -14,9 +14,7 @@ namespace Exercises.Items
         {
             var firstNum = GetNumber("Enter your age: ");
             
-
-            Console.WriteLine($"You look older than {Math.Abs(firstNum)}");
-           
+            Console.WriteLine($"You look older than {Math.Abs(firstNum)}");     
         }
 
         static int GetNumber(string msg)

@@ -14,8 +14,9 @@ namespace Exercises.Items
         {
             var n1 = GetString("Input first integer: ");
             var n2 = GetString("Input second integer: ");
+            int n3 = n1 + n2;
             
-            Console.WriteLine(n1 > 20 || n2 > 20 || n1 + n2 > 20);
+            Console.WriteLine(n1 == 20 || n2 == 20 || n3 == 20);
         }
 
         static int GetString(string msg)

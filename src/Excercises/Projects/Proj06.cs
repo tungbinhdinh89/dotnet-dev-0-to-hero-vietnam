@@ -16,7 +16,6 @@ namespace Exercises.Items
             var secondNum = GetNumber("Enter second number: ");
             var thirdNum = GetNumber("Enter third number: ");
 
-            
             Console.WriteLine($"{firstNum} * {secondNum} * {thirdNum} = {firstNum * secondNum * thirdNum}");
         }
 

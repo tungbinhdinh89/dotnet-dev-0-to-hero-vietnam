@@ -13,16 +13,8 @@ namespace Exercises.Items
         public override void Run()
         {
             var n = GetNumber("Enter your num: ");
-            
 
-            Console.WriteLine($"{n} {n} {n} {n}");
-            Console.WriteLine($"{n}{n}{n}{n}");
-            Console.WriteLine($"{n} {n} {n} {n}");
-            Console.WriteLine($"{n}{n}{n}{n}");
-
-
-
-
+            Prinf(n);
         }
 
         static int GetNumber(string msg)
@@ -36,7 +28,16 @@ namespace Exercises.Items
                 }
             }
         }
+        
+        static void Prinf(int n)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine($"{n} {n} {n} {n}");
+                Console.WriteLine($"{n}{n}{n}{n}");
+            }    
 
-       
+        }
+
     }
 }

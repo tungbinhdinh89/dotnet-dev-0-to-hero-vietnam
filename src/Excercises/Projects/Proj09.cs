@@ -17,7 +17,6 @@ namespace Exercises.Items
             var thirdNum = GetNumber("Enter the third number: ");
             var fourNum = GetNumber("Enter the four number: ");
 
-
             Console.WriteLine($"The average of {firstNum}, {secondNum}, {thirdNum}, {fourNum} is {(firstNum + secondNum + thirdNum + fourNum)/ 4}");
            
         }
