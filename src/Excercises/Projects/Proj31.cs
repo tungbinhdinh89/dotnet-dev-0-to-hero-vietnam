@@ -9,8 +9,17 @@ namespace Exercises.Items
         public override void Run()
         {
             int[] array1 = { 1, 3, -5, 4 };
-        }
+            int[] array2 = { 1,4, -5, -2 };
 
-       
+            Console.WriteLine($"Array1: [{string.Join(", ", array1)}]");
+            Console.WriteLine($"Array2: [{string.Join(", ", array2)}]");
+
+            Console.WriteLine($"Multiply corresponding elements of two arrays: ");
+            for (int i = 0; i < array2.Length; i++)
+            {
+                Console.Write($"{array1[i] * array2[i]} ");
+            }
+            Console.WriteLine("");
+        }
     }
 }
