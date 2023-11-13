@@ -1,34 +1,39 @@
 ﻿namespace Exercises.Items
 {
-    public class Proj26 : BaseProj
+    public class Proj25 : BaseProj
     {
-        public override string Description => "Write a C# program to compute the sum of the first 500 prime numbers.";
+        public override string Description => "Write a C# program to print odd numbers from 1 to 99. Prints one number per line.";
 
         public override void Run()
         {
-            int sum = 0;
-            int prime = 0;
-            int n = 2;
-            while (true)
-            {
-
-            }
-
+            var n = GetNumber("Input your number: ");
+            OddNumber(n);
 
         }
 
-
-        static bool IsPrime(int n)
+        static int GetNumber(string msg)
         {
-            int x = (int)(Math.Floor(Math.Sqrt(n)));
-            if (n == 1) return false;
-            if (n == 2) return true;
 
-            for (int i = 2; i < x; i++)
+            while (true)
             {
-                if (n % i == 0) return false;
+                Console.WriteLine(msg);
+                if (int.TryParse(Console.ReadLine(), out var num))
+                {
+                    return num;
+                }
+
             }
-            return true;
+        }
+
+        static void OddNumber(int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                if(i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
 
     }
