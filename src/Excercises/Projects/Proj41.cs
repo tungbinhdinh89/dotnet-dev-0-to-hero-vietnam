@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exercises.Items
+﻿namespace Exercises.Items
 {
     public class Proj41 : BaseProj
     {
@@ -32,18 +30,19 @@ namespace Exercises.Items
         static bool CheckString(string str)
         {
             bool checkString = false;
-            int num = 0;
-            for (int i = 0; i < str.Length; i++)
-            {
-                
-                if (str[i] == c) num++;
-            }
+            var count = str.Count(s => s == c);
+            //for (int i = 0; i < str.Length; i++)
+            //{
 
-            if (num >= 1 && num <= 3)
-            {
-                return checkString = true;
-            }
-            return checkString;
+            //    if (str[i] == c) num++;
+            //}
+
+            //if (num >= 1 && num <= 3)
+            //{
+            //    return checkString = true;
+            //}
+
+            return checkString = (count >= 1 && count <= 3) ? true : false;
         }
     }
 }
