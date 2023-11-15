@@ -6,20 +6,41 @@ namespace Exercises
     {
         public static void Main(string[] args)
         {
+            #region BaseProj
+
+            //var types = Assembly.GetExecutingAssembly()
+            //    .GetTypes()
+            //    .Where(t => t.BaseType == typeof(BaseProj))
+            //    .OrderBy(t => t.Name);
+            //Dictionary<int, BaseProj> projects = new();
+            //int i = 0;
+
+            //foreach (var type in types)
+            //{
+            //    var instance = (BaseProj)Activator.CreateInstance(type);
+            //    Console.WriteLine($"ID {i}: {instance.Description}");
+
+            //    projects.Add(i++, instance);
+            //}
+
+            #endregion
+            #region BaseAlgorithmProj
             var types = Assembly.GetExecutingAssembly()
-                .GetTypes()
-                .Where(t => t.BaseType == typeof(BaseProj))
-                .OrderBy(t => t.Name);
-            Dictionary<int, BaseProj> projects = new();
+               .GetTypes()
+               .Where(t => t.BaseType == typeof(BaseAlgorithmProj))
+               .OrderBy(t => t.Name);
+            Dictionary<int, BaseAlgorithmProj> projects = new();
             int i = 0;
 
             foreach (var type in types)
             {
-                var instance = (BaseProj)Activator.CreateInstance(type);
+                var instance = (BaseAlgorithmProj)Activator.CreateInstance(type);
                 Console.WriteLine($"ID {i}: {instance.Description}");
 
                 projects.Add(i++, instance);
             }
+            #endregion
+
 
             var cont = true;
             do
