@@ -7,15 +7,21 @@ using System.Threading.Tasks;
 
 namespace Exercises.Items
 {
-    public class BAProj20 : BaseAlgorithmProj
+    public class BAProj22 : BaseAlgorithmProj
     {
-        public override string Description => "Write a C# Sharp program to check whether two given integers are in the range 40..50 inclusive, or they are both in the range 50..60 inclusive.";
+        public override string Description => "Write a C# Sharp program to check if a given string contains between 2 and 4 'z' characters.";
         public override void Run()
         {
-            var num1 = GetNumber("Input your first number");
-            var num2 = GetNumber("Input your second number");
-           
-            var result = (((num1 >= 40 && num1 <= 50) || (num2 >= 40 && num2 <= 50))||(num1 >= 50 && num1 <= 60)||(num2 >= 50 && num2 <= 60)) ?true : false;
+            var str = GetString("Input your string");
+           int num = 0;
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == 'z')
+                {
+                    num++;
+                }
+            }
+            var result = (num >= 2 && num <=4 )  ? true : false;
 
             Console.WriteLine(result);
         }

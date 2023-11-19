@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 
 namespace Exercises.Items
 {
-    public class BAProj20 : BaseAlgorithmProj
+    public class BAProj21 : BaseAlgorithmProj
     {
-        public override string Description => "Write a C# Sharp program to check whether two given integers are in the range 40..50 inclusive, or they are both in the range 50..60 inclusive.";
+        public override string Description => "Write a C# Sharp program to find the largest value from two positive integer values in the range 20..30 inclusive. Return 0 if neither is in that range.";
         public override void Run()
         {
             var num1 = GetNumber("Input your first number");
             var num2 = GetNumber("Input your second number");
-           
-            var result = (((num1 >= 40 && num1 <= 50) || (num2 >= 40 && num2 <= 50))||(num1 >= 50 && num1 <= 60)||(num2 >= 50 && num2 <= 60)) ?true : false;
+           ;
+
+            var result = ((num1 >= 20 && num1 <= 30) && (num1 >= 20 && num1 <= 30)) ?(Math.Max(num1,num2)) : 0;
 
             Console.WriteLine(result);
         }
