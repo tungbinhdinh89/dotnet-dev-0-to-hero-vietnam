@@ -40,25 +40,38 @@ namespace Exercises
             //    projects.Add(i++, instance);
             //}
             #endregion
-
             #region ExceptionHandlingProj
+            //var types = Assembly.GetExecutingAssembly()
+            //   .GetTypes()
+            //   .Where(t => t.BaseType == typeof(ExceptionHandlingProj))
+            //   .OrderBy(t => t.Name);
+            //Dictionary<int, ExceptionHandlingProj> projects = new();
+            //int i = 0;
+
+            //foreach (var type in types)
+            //{
+            //    var instance = (ExceptionHandlingProj)Activator.CreateInstance(type);
+            //    Console.WriteLine($"ID {i}: {instance.Description}");
+
+            //    projects.Add(i++, instance);
+            //}
+            #endregion
+            #region DataTypesProj
             var types = Assembly.GetExecutingAssembly()
                .GetTypes()
-               .Where(t => t.BaseType == typeof(ExceptionHandlingProj))
+               .Where(t => t.BaseType == typeof(DataTypesProj))
                .OrderBy(t => t.Name);
-            Dictionary<int, ExceptionHandlingProj> projects = new();
+            Dictionary<int, DataTypesProj> projects = new();
             int i = 0;
 
             foreach (var type in types)
             {
-                var instance = (ExceptionHandlingProj)Activator.CreateInstance(type);
+                var instance = (DataTypesProj)Activator.CreateInstance(type);
                 Console.WriteLine($"ID {i}: {instance.Description}");
 
                 projects.Add(i++, instance);
             }
             #endregion
-
-
             var cont = true;
             do
             {
