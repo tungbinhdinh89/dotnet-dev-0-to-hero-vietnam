@@ -1,15 +1,13 @@
 ﻿namespace Exercises.Items
 {
-    public class DTProj01 : DataTypesProj
+    public class DTProj05 : DataTypesProj
     {
-        public override string Description => "Write a C# Sharp program that takes three letters and displays them in reverse order.";
+        public override string Description => "Write a C# Sharp program that takes two numbers as input and performs an operation (+,-,*,x,/) on them and displays the result of that operation.";
+
+      
         public override void Run()
         {
-            var letter1 = GetChar("Input Letter 1");
-            var letter2 = GetChar("Input Letter 2");
-            var letter3 = GetChar("Input Letter 3");
-
-            Console.WriteLine("{0} {1} {2}", letter3, letter2, letter1);
+            
         }
 
         static int GetNumber(string msg)

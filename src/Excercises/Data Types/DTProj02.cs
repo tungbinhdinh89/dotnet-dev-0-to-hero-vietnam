@@ -1,15 +1,23 @@
 ﻿namespace Exercises.Items
 {
-    public class DTProj01 : DataTypesProj
+    public class DTProj02 : DataTypesProj
     {
-        public override string Description => "Write a C# Sharp program that takes three letters and displays them in reverse order.";
+        public override string Description => "Write a C# Sharp program that takes a number and a width also a number. It then displays a triangle of that width using that number.";
         public override void Run()
         {
-            var letter1 = GetChar("Input Letter 1");
-            var letter2 = GetChar("Input Letter 2");
-            var letter3 = GetChar("Input Letter 3");
+            var number = GetNumber("Input a number: ");
+            var width = GetNumber("Input the desired width: ");
 
-            Console.WriteLine("{0} {1} {2}", letter3, letter2, letter1);
+            int height = width;
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    Console.Write(number);
+                }
+                Console.WriteLine();
+                width--;
+            }
         }
 
         static int GetNumber(string msg)
